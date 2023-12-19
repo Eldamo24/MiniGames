@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 public class Movement : MonoBehaviour
 {
     private Rigidbody rb;
     private float speed = 5f;
-    private float jumpForce = 4f;
+    private float jumpForce = 3f;
     public int lifes = 5;
     [SerializeField]
     private bool onFloor;
