@@ -11,6 +11,10 @@ public class Movement : MonoBehaviour
     public int lifes = 5;
     [SerializeField]
     private bool onFloor;
+    [SerializeField]
+    private GameObject gameUI;
+    [SerializeField]
+    private GameObject pauseUI;
 
 
     void Awake()
@@ -32,6 +36,12 @@ public class Movement : MonoBehaviour
         {
             onFloor = false;
             rb.velocity += jumpForce * Vector3.up;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameUI.SetActive(false);
+            pauseUI.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
