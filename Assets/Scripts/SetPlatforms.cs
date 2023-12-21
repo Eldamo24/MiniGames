@@ -17,14 +17,15 @@ public class StartGame : MonoBehaviour
             if(randomNumber == 1)
             {
                 platforms[i].GetComponent<BoxCollider>().isTrigger = true;
-                platforms[i].AddComponent<DestroyPlatform>();
+                platforms[i].GetComponent<DestroyPlatform>().enabled = true;
                 platforms[i+1].GetComponent<BoxCollider>().isTrigger = false;
             }
             else
             {
                 platforms[i].GetComponent<BoxCollider>().isTrigger = false;
                 platforms[i + 1].GetComponent<BoxCollider>().isTrigger = true;
-                platforms[i+1].AddComponent<DestroyPlatform>();
+                platforms[i + 1].GetComponent<DestroyPlatform>().enabled = true;
+
             }
         }
         text = GameObject.Find("Lifes").GetComponent<TMP_Text>();

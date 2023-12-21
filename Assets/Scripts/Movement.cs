@@ -12,10 +12,14 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private bool onFloor;
 
+
     void Awake()
     {
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
+        Time.timeScale = 1f;
     }
+
+
 
     // Update is called once per frame
     void FixedUpdate()
