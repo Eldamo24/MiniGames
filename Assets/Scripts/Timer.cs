@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
     void Awake()
     {
         timer = GetComponent<TMP_Text>();
-        seconds = 120f;
+        seconds = 60f;
         timer.text = "Seconds: " + seconds;
     }
 
